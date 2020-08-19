@@ -4,10 +4,11 @@ $(function(){
     function getuserInfo() {  
         $.ajax({  
           method:'GET',
-          mytoks: true,
+          mytoks: true, //设置token
           url:'/my/userinfo',
           success: function(res) { 
             console.log(res);
+            localStorage.setItem('userinfo',res)
             //do something 优化页面
           }
         })

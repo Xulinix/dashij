@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <link rel="stylesheet" href="./assets/lib/layui/css/layui.css" />
+  <link rel="stylesheet" href="./assets/css/userinfo.css" />
+  <script src="./assets/lib/template-web.js"></script>
+  <script src="./assets/lib/jquery.js"></script>
+  <div id="container">
+    <script type="text/html" id="tpl-user">
+      <div class="layui-form">
+          <form class="layui-form" action="">
+         <div class="layui-form-item">
+          <label class="layui-form-label">用户昵称</label>
+          <div class="layui-input-block">
+            <input type="text" name="" value placeholder="请输入" autocomplete="off" class="layui-input">
+          </div>
+        </div>
+         <div class="layui-form-item">
+          <label class="layui-form-label">登录名称</label>
+          <div class="layui-input-block">
+            <input type="text" name="" placeholder="请输入" autocomplete="off" class="layui-input">
+          </div>
+        </div>
+         <div class="layui-form-item">
+          <label class="layui-form-label">用户邮箱    </label>
+          <div class="layui-input-block">
+            <input type="text" name="" placeholder="请输入" autocomplete="off" class="layui-input">
+          </div>
+        </div>
+         <div class="layui-form-item">
+              <div class="layui-input-block">
+                <button class="layui-btn" lay-submit lay-filter="formDemo">立即提交</button>
+                <button type="reset" class="layui-btn layui-btn-primary">重置</button>
+              </div>
+
+          </div>
+      </form>
+        </div>
+    </script>
+  </div>
+  <script>
+    var data = localStorage.getItem("userinfo");
+    var htmlstr = template("tpl-user", data);
+    console.log(htmlstr);
+    $("#container").html(htmlstr);
+    console.log(data);
+  </script>
+  <body>
+    <script src="./assets/lib/layui/layui.all.js"></script>
+  </body>
+</html>
