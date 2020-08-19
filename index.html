@@ -11,6 +11,9 @@
     <!-- 导入自己的样式表 -->
     <link rel="stylesheet" href="./assets/css/index.css" />
     <script src="./assets/js/jquery.js"></script>
+    <script src="./assets//js/baseAPI.js"></script>
+    <script src="./assets/js/index.js"></script>
+
   </head>
   <body class="layui-layout-body">
     <div class="layui-layout layui-layout-admin">
@@ -22,7 +25,7 @@
         <ul class="layui-nav layui-layout-right">
           <li class="layui-nav-item">
             <a href="javascript:;" class="userinfo">
-              <img src="http://t.cn/RCzsdCq" class="layui-nav-img" />
+              <img src="./assets/images/logo2.jpg" class="layui-nav-img" />
               <span class="text-avatar">A</span>
               个人中心
             </a>
@@ -32,8 +35,8 @@
               <dd><a href="">重置密码</a></dd>
             </dl>
           </li>
-          <li class="layui-nav-item">
-            <a href=""><span class="iconfont icon-tuichu"></span>退出</a>
+          <li class="layui-nav-item" id="nav-tuichu">
+            <a href="javaScript:;"><span class="iconfont icon-tuichu"></span>退出</a>
           </li>
         </ul>
       </div>
@@ -41,7 +44,7 @@
       <div class="layui-side layui-bg-black">
         <div class="layui-side-scroll">
           <div class="userinfo">
-            <img src="http://t.cn/RCzsdCq" class="layui-nav-img" />
+            <img src="./assets/images/logo2.jpg" class="layui-nav-img" />
             <span class="text-avatar">A</span>
             <span id="welcome">欢迎 ***</span>
           </div>
@@ -77,7 +80,7 @@
                   <a href="javascript:;"><i class="layui-icon layui-icon-app"></i>重置密码</a>
                 </dd>
               </dl>
-            </li>
+            </li> 
           </ul>
         </div>
       </div>
@@ -85,7 +88,7 @@
       <div class="layui-body">
         <!-- 内容主体区域 -->
      <iframe name="fm" src="./home/dashboard.html" frameborder="0"></iframe>
-       
+      
       </div>
 
       <div class="layui-footer">
