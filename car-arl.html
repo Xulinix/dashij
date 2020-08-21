@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <script src="./assets/js/jquery.js"></script>
+  <script src="./assets/js/baseAPI.js"></script>
+  <link rel="stylesheet" href="./assets/lib/layui/css/layui.css" />
+  <script src="./assets/lib/template-web.js"></script>
+  <style>
+      html,
+body {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  padding: 15px ;
+  background-color: #f2f3f5;
+}
+
+.layui-card-header {
+    font-size: 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.layui-btn-xs {  
+    font-size: 15px;
+    padding:0 20px;  
+    height: 40px;
+}
+  </style>
+
+  
+  <body>
+    <!-- 卡片区域 -->
+    <div class="layui-card">
+      <div class="layui-card-header">
+        <span>文章类别管理</span>
+        <button class="layui-btn layui-btn-normal layui-btn ">添加类别</button>
+      </div>
+      <div class="layui-card-body">
+        <table class="layui-table">
+        <colgroup>
+          <col />
+          <col />
+          <col width="200" />
+        </colgroup>
+        <thead>
+          <tr>
+            <th>分类名称</th>
+            <th>分类别名</th>
+            <th>操作</th>
+          </tr>
+        </thead>
+        <tbody>
+          <!-- <tr>
+            <td>先行</td>
+            <td>2016-11-29</td>
+            <td>
+                <a href="#">修改</a>
+                <a href="#">删除</a>
+            </td>
+          </tr> -->
+          <script type="text/html" id="tpl-data">
+            {{each data}}
+                <tr>
+                    <td>{{ $value.name}}</td>
+                    <td>{{$value.alias}}</td>
+                    <td  style='display:none'>  {{$value.Id}}</td>
+                    <td>
+                        <button type="button" class="layui-btn layui-btn-xs">添加</button>
+                        <button type="button"  class="del-btn layui-btn layui-btn-danger layui-btn-xs">删除</button>
+                    </td>
+                </tr>
+            {{/each}}
+        </script>
+        </tbody>
+        </table>
+      </div>
+    </div>
+   
+    
+    
+  </body>
+  <script>
+      //help
+//       $('tbody').on('click',function(e) {   
+//     var layer = layui.layer
+//    console.log(e.target);    
+// })
+
+  </script>
+  <script src="./assets/lib/layui/layui.all.js"></script>
+  <script src="./assets/js/car_arl.js"></script>
+</html>
